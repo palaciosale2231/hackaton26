@@ -9,16 +9,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="assents/interfaz.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="container nav-flex">
-        <a class="logo" href="index.html">Infórmate y cuídate</a>
+        <div class="logo">Informate y cuidate.</div>
         <div class="nav-links">
-          <a href="index.html">Inicio</a
-          ><a class="active" href="enfermedades.html"
-            >Enfermedades y prevención</a
-          ><a href="encuesta.html">Encuesta</a>
+          <a href="interfaz.html" class="link-companero">Interfaz</a>
+          <a href="enfermedades.html" class="active">Enfermedades</a>
+          <a href="encuesta.html" class="link-companero">Encuesta</a>
+          <a href="hospitales.html" class="link-companero">Hospitales</a>
+          <a href="resultado.html" class="link-companero">Resultado</a>
         </div>
       </div>
     </nav>
@@ -39,13 +41,13 @@
           a actuar a tiempo y a proteger a toda la familia.
         </p>
       </section>
-      <section class="seccion">
+      <section class="seccion" id="criaderos">
         <h2>¿Dónde se cría el mosquito?</h2>
         <p>
           El mosquito Aedes aegypti puede desarrollarse en pequeñas cantidades
           de agua quieta. Revisá estos lugares todas las semanas:
         </p>
-        <div class="row g-4 mt-3">
+        <div class="row g-4 mt-3" id="recipientes">
           <div class="col-md-4">
             <article class="mosquito-card">
               <img
@@ -216,9 +218,9 @@
           </div>
         </div>
       </section>
-      <section class="prevencion">
+      <section class="prevencion" id="agua">
         <h2>Cuatro hábitos que hacen la diferencia</h2>
-        <div class="row g-4 mt-3">
+        <div class="row g-4 mt-3" id="mascotas">
           <div class="col-md-3">
             <div class="prevencion-item">
               <h4>Vaciá</h4>
@@ -237,7 +239,7 @@
               <p>Usá repelente y ropa larga.</p>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" id="tanques">
             <div class="prevencion-item">
               <h4>Tapá</h4>
               <p>Cubrí tanques y reservorios.</p>
