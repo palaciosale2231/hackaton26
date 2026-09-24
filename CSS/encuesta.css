@@ -1,0 +1,123 @@
+
+      body {
+        background-color: #f5f7fa;
+        min-height: 100vh;
+      }
+
+      .encuesta-container {
+        max-width: 850px;
+        margin: 60px auto;
+        padding: 20px;
+      }
+
+      .encuesta-card {
+        background-color: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .titulo {
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      .titulo h1 {
+        font-weight: 700;
+      }
+
+      .progreso-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        color: #6c757d;
+        font-size: 0.95rem;
+      }
+
+      .progress {
+        height: 10px;
+        border-radius: 10px;
+        margin-bottom: 45px;
+      }
+
+      .progress-bar {
+        transition: width 0.4s ease;
+      }
+
+      .pregunta {
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      .pregunta h2 {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      .opciones {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .opcion {
+        border: 2px solid #dee2e6;
+        border-radius: 15px;
+        background-color: white;
+        padding: 25px 20px;
+        min-height: 110px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .opcion:hover {
+        border-color: #0d6efd;
+        background-color: #f0f6ff;
+        transform: translateY(-2px);
+      }
+
+      .opcion.seleccionada {
+        border-color: #0d6efd;
+        background-color: #e7f0ff;
+        color: #0d6efd;
+        box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+      }
+
+      .botones {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+      }
+
+      .botones button {
+        min-width: 130px;
+        border-radius: 10px;
+        padding: 10px 20px;
+      }
+
+      @media (max-width: 600px) {
+        .encuesta-card {
+          padding: 25px 18px;
+        }
+
+        .opciones {
+          grid-template-columns: 1fr;
+        }
+
+        .pregunta h2 {
+          font-size: 1.3rem;
+        }
+
+        .botones button {
+          min-width: 110px;
+        }
+      }
