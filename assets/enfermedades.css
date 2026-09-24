@@ -212,21 +212,20 @@ margin-bottom: 45px;
 }
 
 /* ==========================================
-   1. VARIABLES Y PALETA AMARILLO CLARO
+   1. VARIABLES Y PALETA VERDE / CELESTE PASTEL
    ========================================== */
 :root {
-  /* Paleta Amarillo / Cálida */
-  --color-primario: #eab308;      /* Amarillo Cálido */
-  --color-oscuro: #854d0e;        /* Amarillo/Marrón Oscuro para encabezados */
-  --color-barra: #fef08a;         /* Amarillo Claro para el Navbar */
-  --color-fondo: #fefce8;         /* Fondo General Amarillo Muy Claro */
-  --color-card-bg: #ffffff;       /* Tarjetas Blancas para contraste */
-  --color-texto: #1c1917;         /* Texto Lectura Oscuro */
-  --color-borde: #fef08a;         /* Bordes Suaves Amarillos */
-  
-  --alerta-amarillo-bg: #fef9c3;  /* Fondo Alerta/Aviso */
-  --alerta-amarillo-borde: #fde047;
-  --alerta-amarillo-texto: #713f12;
+  --color-primario: #79bfa5;
+  --color-oscuro: #2f6f62;
+  --color-barra: #d9f0e5;
+  --color-fondo: #eef9f5;
+  --color-card-bg: #ffffff;
+  --color-texto: #27484a;
+  --color-borde: #b9ded8;
+
+  --alerta-amarillo-bg: #e0f3f5;
+  --alerta-amarillo-borde: #91cfd1;
+  --alerta-amarillo-texto: #28636a;
 }
 
 * {
@@ -288,7 +287,7 @@ body {
 }
 
 .nav-links a {
-  color: #713f12;
+  color: #28636a;
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 600;
@@ -303,11 +302,11 @@ body {
 }
 
 .link-companero {
-  background: rgba(234, 179, 8, 0.3);
-  color: #713f12 !important;
+  background: rgba(121, 191, 165, 0.3);
+  color: #28636a !important;
   padding: 0.35rem 0.75rem;
   border-radius: 6px;
-  border: 1px solid rgba(202, 138, 4, 0.4);
+  border: 1px solid rgba(90, 174, 194, 0.45);
   transition: all 0.2s;
 }
 
@@ -347,13 +346,13 @@ body {
 
 .hero h1 {
   font-size: 2.2rem;
-  color: #422006;
+  color: #20514c;
   margin-bottom: 0.8rem;
 }
 
 .hero-description {
   font-size: 1rem;
-  color: #713f12;
+  color: #28636a;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.7;
@@ -377,7 +376,7 @@ body {
 }
 
 .badge-salud {
-  background: #fef9c3;
+  background: #e0f3f5;
   color: var(--color-oscuro);
   font-size: 0.75rem;
   font-weight: 700;
@@ -427,7 +426,7 @@ body {
 }
 
 .card-icon-wrapper {
-  background: #fef9c3;
+  background: #e0f3f5;
   width: 48px;
   height: 48px;
   border-radius: 12px;
@@ -456,7 +455,7 @@ body {
 
 .card-solucion {
   border-color: var(--color-primario);
-  background: linear-gradient(180deg, #ffffff 0%, #fef9c3 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #e0f3f5 100%);
 }
 
 .card-solucion p strong {
@@ -487,7 +486,7 @@ body {
 }
 
 .problem-box p {
-  color: #713f12;
+  color: #28636a;
   font-size: 0.95rem;
 }
 
@@ -536,11 +535,11 @@ body {
 }
 
 .callout-highlight {
-  background: #fef9c3;
+  background: #e0f3f5;
   border-left: 3px solid var(--color-primario);
   padding: 0.8rem;
   border-radius: 6px;
-  color: #713f12;
+  color: #28636a;
   font-size: 0.85rem;
   margin-top: 1rem;
 }
@@ -550,7 +549,7 @@ body {
    ========================================== */
 .cta-section {
   text-align: center;
-  background: #fef9c3;
+  background: #e0f3f5;
   border: 2px dashed var(--color-primario);
 }
 
@@ -569,7 +568,7 @@ body {
 
 .cta-section p {
   font-size: 0.88rem;
-  color: #713f12;
+  color: #28636a;
   margin-bottom: 1.5rem;
 }
 
