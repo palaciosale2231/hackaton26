@@ -1,0 +1,631 @@
+body {
+	background-color: #f2f7f4;
+    
+}
+
+header {
+	background-color: #f0ed4b;
+	color: white;
+	text-align: center;
+	padding: 30px;
+}
+h4 {
+	text-align: center;
+}
+Inicio {
+	text-decoration: none;
+}
+.video {
+	text-align: center;
+}
+
+
+#carouselPequeno {
+	width: 350px;
+	margin: 30px auto;
+}
+
+#carouselPequeno .carousel-inner {
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+#carouselPequeno img {
+	width: 350px;
+	height: 250px;
+	object-fit: cover;
+}
+
+/* =========================
+VIDEO
+========================= */
+
+.video-presentacion {
+display: block;
+width: 700px;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+border-radius: 15px;
+}
+
+/* =========================
+PRESENTACIÓN
+========================= */
+
+.presentacion {
+max-width: 900px;
+margin: 0 auto;
+}
+
+.presentacion h1 {
+font-size: 38px;
+font-weight: bold;
+}
+
+.intro {
+max-width: 800px;
+margin: 20px auto;
+font-size: 18px;
+line-height: 1.7;
+}
+
+/* =========================
+SECCIONES
+========================= */
+
+.seccion {
+margin-top: 70px;
+margin-bottom: 70px;
+}
+
+.seccion h2 {
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+.seccion p {
+font-size: 17px;
+line-height: 1.7;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.mosquito-card {
+height: 100%;
+border: none;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+transition: transform 0.3s ease;
+}
+
+.mosquito-card:hover {
+transform: translateY(-6px);
+}
+
+.mosquito-card img {
+width: 100%;
+height: 210px;
+object-fit: cover;
+}
+
+.mosquito-card .card-body {
+padding: 20px;
+}
+
+.mosquito-card .card-title {
+font-weight: bold;
+}
+
+/* =========================
+CARRUSEL
+========================= */
+
+#carouselEnfermedades {
+max-width: 850px;
+margin: 40px auto 0;
+border-radius: 15px;
+overflow: hidden;
+}
+
+#carouselEnfermedades img {
+width: 100%;
+height: 400px;
+object-fit: cover;
+}
+
+/* =========================
+INFORMACIÓN ENFERMEDADES
+========================= */
+
+.info-enfermedad {
+height: 100%;
+padding: 25px;
+border-radius: 15px;
+background-color: #f5f5f5;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-enfermedad h3 {
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+/* =========================
+PREVENCIÓN
+========================= */
+
+.prevencion {
+margin-top: 70px;
+margin-bottom: 50px;
+padding: 45px 25px;
+border-radius: 20px;
+background-color: #f1f8f5;
+}
+
+.prevencion h2 {
+font-weight: bold;
+}
+
+.prevencion-item {
+height: 100%;
+padding: 20px;
+background-color: white;
+border-radius: 15px;
+}
+
+.prevencion-item h4 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.prevencion-item p {
+margin-bottom: 0;
+}
+
+/* =========================
+CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+.video-presentacion {
+width: 100%;
+}
+
+.presentacion h1 {
+font-size: 30px;
+}
+
+#carouselEnfermedades img {
+height: 280px;
+}
+
+.seccion {
+margin-top: 45px;
+margin-bottom: 45px;
+}
+
+}
+
+/* ==========================================
+   1. VARIABLES Y PALETA VERDE / CELESTE PASTEL
+   ========================================== */
+:root {
+  --color-primario: #79bfa5;
+  --color-oscuro: #2f6f62;
+  --color-barra: #d9f0e5;
+  --color-fondo: #eef9f5;
+  --color-card-bg: #ffffff;
+  --color-texto: #27484a;
+  --color-borde: #b9ded8;
+
+  --alerta-amarillo-bg: #e0f3f5;
+  --alerta-amarillo-borde: #91cfd1;
+  --alerta-amarillo-texto: #28636a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================
+   2. NAVBAR Y HERO (PORTADA CON IMAGEN)
+   ========================================== */
+.navbar {
+  background-color: var(--color-barra);
+  color: var(--color-texto);
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(133, 77, 14, 0.1);
+  border-bottom: 3px solid var(--color-primario);
+}
+
+.nav-flex {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-oscuro);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav-links a {
+  color: #28636a;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a.active {
+  color: var(--color-oscuro);
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-oscuro);
+  padding-bottom: 2px;
+}
+
+.link-companero {
+  background: rgba(121, 191, 165, 0.3);
+  color: #28636a !important;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(90, 174, 194, 0.45);
+  transition: all 0.2s;
+}
+
+.link-companero:hover {
+  background: var(--color-primario);
+  color: #1c1917 !important;
+}
+
+/* HERO CON FILTRO AMARILLO SOBRE LA IMAGEN */
+.hero {
+  background: linear-gradient(
+      rgba(254, 240, 138, 0.88), 
+      rgba(234, 179, 8, 0.85)
+    ), 
+    url('img/OIP.webp'); /* Ruta desde assents/style.css hacia assents/img/OIP.webp */
+    
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-texto);
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--color-oscuro);
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-primario);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: #20514c;
+  margin-bottom: 0.8rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #28636a;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* ==========================================
+   3. ESTILOS MODERNOS DE LA INTRODUCCIÓN
+   ========================================== */
+.main-content {
+  padding: 3rem 1.5rem;
+}
+
+.intro-moderna {
+  padding: 1rem 0 2.5rem 0;
+}
+
+.intro-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.badge-salud {
+  background: #e0f3f5;
+  color: var(--color-oscuro);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  border: 1px solid var(--color-primario);
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.intro-titulo {
+  font-size: 1.8rem;
+  color: var(--color-oscuro);
+  font-weight: 800;
+}
+
+/* Grilla Responsiva de Cards */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .intro-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.intro-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(234, 179, 8, 0.2);
+}
+
+.card-icon-wrapper {
+  background: #e0f3f5;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon-emoji {
+  font-size: 1.4rem;
+}
+
+.card-content h3 {
+  font-size: 1.05rem;
+  color: var(--color-oscuro);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.88rem;
+  color: #44403c;
+  line-height: 1.6;
+}
+
+.card-solucion {
+  border-color: var(--color-primario);
+  background: linear-gradient(180deg, #ffffff 0%, #e0f3f5 100%);
+}
+
+.card-solucion p strong {
+  color: var(--color-oscuro);
+}
+
+/* ==========================================
+   4. PROBLEMÁTICA Y TARJETAS DE CONCIENTIZACIÓN
+   ========================================== */
+.section-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 6px -1px rgba(234, 179, 8, 0.05);
+}
+
+.problem-box {
+  background-color: var(--alerta-amarillo-bg);
+  border-left: 5px solid var(--color-primario);
+}
+
+.problem-box h2 {
+  color: var(--alerta-amarillo-texto);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.problem-box p {
+  color: #28636a;
+  font-size: 0.95rem;
+}
+
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-2-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-info {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  padding: 1.8rem;
+}
+
+.card-header-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-info h3 {
+  color: var(--color-oscuro);
+  font-size: 1.15rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-info p {
+  font-size: 0.88rem;
+  color: #44403c;
+  margin-bottom: 0.8rem;
+}
+
+.text-subtle {
+  font-size: 0.85rem;
+  color: #78716c;
+  border-top: 1px solid var(--color-borde);
+  padding-top: 0.8rem;
+}
+
+.callout-highlight {
+  background: #e0f3f5;
+  border-left: 3px solid var(--color-primario);
+  padding: 0.8rem;
+  border-radius: 6px;
+  color: #28636a;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* ==========================================
+   5. SECCIÓN DE CONEXIÓN CON EL COMPAÑERO (CTA)
+   ========================================== */
+.cta-section {
+  text-align: center;
+  background: #e0f3f5;
+  border: 2px dashed var(--color-primario);
+}
+
+.cta-subtitle {
+  color: var(--color-oscuro);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cta-section h2 {
+  font-size: 1.4rem;
+  color: var(--color-oscuro);
+  margin-top: 0.2rem;
+}
+
+.cta-section p {
+  font-size: 0.88rem;
+  color: #28636a;
+  margin-bottom: 1.5rem;
+}
+
+.grid-cta-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .grid-cta-buttons {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-borde);
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--color-texto);
+  text-align: left;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.card-cta:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primario);
+  box-shadow: 0 6px 16px rgba(234, 179, 8, 0.2);
+}
+
+.cta-icon {
+  font-size: 2rem;
+}
+
+.card-cta h4 {
+  font-size: 0.95rem;
+  color: var(--color-oscuro);
+}
+
+.card-cta p {
+  font-size: 0.8rem;
+  color: #78716c;
+  margin-bottom: 0;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.75rem;
+  color: #78716c;
+  border-top: 1px solid var(--color-borde);
+  background: var(--color-barra);
+}
+
