@@ -1,37 +1,212 @@
 body {
-    background-color: #f2f7f4;
+	background-color: #f2f7f4;
     
 }
 
 header {
-    background-color: #f0ed4b;
-    color: white;
-    text-align: center;
-    padding: 30px;
+	background-color: #f0ed4b;
+	color: white;
+	text-align: center;
+	padding: 30px;
 }
 h4 {
-    text-align: center;
+	text-align: center;
 }
 Inicio {
-    text-decoration: none;
+	text-decoration: none;
 }
 .video {
-    text-align: center;
+	text-align: center;
 }
 
 
 #carouselPequeno {
-    width: 350px;
-    margin: 30px auto;
+	width: 350px;
+	margin: 30px auto;
 }
 
 #carouselPequeno .carousel-inner {
-    border-radius: 15px;
-    overflow: hidden;
+	border-radius: 15px;
+	overflow: hidden;
 }
 
 #carouselPequeno img {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
+	width: 350px;
+	height: 250px;
+	object-fit: cover;
+}
+
+/* =========================
+VIDEO
+========================= */
+
+.video-presentacion {
+display: block;
+width: 700px;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+border-radius: 15px;
+}
+
+/* =========================
+PRESENTACIÓN
+========================= */
+
+.presentacion {
+max-width: 900px;
+margin: 0 auto;
+}
+
+.presentacion h1 {
+font-size: 38px;
+font-weight: bold;
+}
+
+.intro {
+max-width: 800px;
+margin: 20px auto;
+font-size: 18px;
+line-height: 1.7;
+}
+
+/* =========================
+SECCIONES
+========================= */
+
+.seccion {
+margin-top: 70px;
+margin-bottom: 70px;
+}
+
+.seccion h2 {
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+.seccion p {
+font-size: 17px;
+line-height: 1.7;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.mosquito-card {
+height: 100%;
+border: none;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+transition: transform 0.3s ease;
+}
+
+.mosquito-card:hover {
+transform: translateY(-6px);
+}
+
+.mosquito-card img {
+width: 100%;
+height: 210px;
+object-fit: cover;
+}
+
+.mosquito-card .card-body {
+padding: 20px;
+}
+
+.mosquito-card .card-title {
+font-weight: bold;
+}
+
+/* =========================
+CARRUSEL
+========================= */
+
+#carouselEnfermedades {
+max-width: 850px;
+margin: 40px auto 0;
+border-radius: 15px;
+overflow: hidden;
+}
+
+#carouselEnfermedades img {
+width: 100%;
+height: 400px;
+object-fit: cover;
+}
+
+/* =========================
+INFORMACIÓN ENFERMEDADES
+========================= */
+
+.info-enfermedad {
+height: 100%;
+padding: 25px;
+border-radius: 15px;
+background-color: #f5f5f5;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-enfermedad h3 {
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+/* =========================
+PREVENCIÓN
+========================= */
+
+.prevencion {
+margin-top: 70px;
+margin-bottom: 50px;
+padding: 45px 25px;
+border-radius: 20px;
+background-color: #f1f8f5;
+}
+
+.prevencion h2 {
+font-weight: bold;
+}
+
+.prevencion-item {
+height: 100%;
+padding: 20px;
+background-color: white;
+border-radius: 15px;
+}
+
+.prevencion-item h4 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.prevencion-item p {
+margin-bottom: 0;
+}
+
+/* =========================
+CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+.video-presentacion {
+width: 100%;
+}
+
+.presentacion h1 {
+font-size: 30px;
+}
+
+#carouselEnfermedades img {
+height: 280px;
+}
+
+.seccion {
+margin-top: 45px;
+margin-bottom: 45px;
+}
+
 }

@@ -1,135 +1,69 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Prevención del dengue | Infórmate y cuídate</title>
     <link rel="stylesheet" href="assets/enfermedades.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
-    <!-- NAVEGACIÓN PRINCIPAL -->
     <nav class="navbar">
       <div class="container nav-flex">
-        <div class="logo">🦟 Informate y cuidate.</div>
+        <a class="logo" href="index.html">Infórmate y cuídate</a>
         <div class="nav-links">
-          <a href="index.html" class="active">Inicio / Problemática</a>
-          <!-- Enlaces hacia los módulos de tu compañero -->
-          <a href="ciclo.html" class="link-companero"
-            >Enfermedades y prevención. ↗</a
-          >
-          <a href="enfermedades.html" class="link-companero">Encuesta ↗</a>
+          <a class="active" href="index.html">Inicio</a
+          ><a href="enfermedades.html">Enfermedades y prevención</a
+          ><a href="encuesta.html">Encuesta</a>
         </div>
       </div>
     </nav>
-
-    <video
-      src="assets/img/videozamba1.0.mp4"
-      autoplay
-      muted
-      loop
-      width="700"
-    ></video>
-    <h4>
-      Buenos dias, buenas tardes y buenas noches, si usted piensa que su hijo/a
-      tiene alguna enfermedad transmitida por la picadura de un mosquito, dejame
-      decirle que hizo lo correcto a buscar nuestra pagina web.
-    </h4>
-    <h3>Como se transmiten</h3>
-    <p>
-      Las enfermedades son transmitidas por mosquitos infectados. Mayormente
-      porque hay una gran cantidad de agua acumulada en baldes, piletas, etc.
-      Esto puede provocar que aparezcan larvas, huevos, pusmas
-    </p>
-    <p>Ejemplos de los lugares donde pueden estar</p>
-    <div class="card" style="width: 18rem">
-      <img src="..." class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card’s content.
+    <main class="container">
+      <section class="hero-panel">
+        <h1>Pequeñas acciones, hogares más seguros.</h1>
+        <p>
+          Aprendé a reconocer los riesgos del mosquito Aedes aegypti y a
+          prevenir el dengue, el zika y la chikungunya en tu comunidad.
         </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <h1>Las enfermedades transmitidas por los mosquitos son:</h1>
-    <p>Dengue: El dengue es una enfermedad que</p>
-    <p></p>
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="assets/img/dengue.jpeg" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>El dengue</h5>
-            <p>Las enfermedades que pueda transmitir el dengue</p>
+        <a class="action-link" href="enfermedades.html"
+          >Conocer las enfermedades</a
+        >
+      </section>
+      <section class="seccion">
+        <h2>La prevención empieza en casa</h2>
+        <p>
+          Eliminá, vaciá y cepillá los recipientes que puedan juntar agua.
+          También usá repelente, ropa que cubra la piel y mosquiteros para
+          reducir las picaduras.
+        </p>
+        <div class="row g-4 mt-3">
+          <div class="col-md-4">
+            <div class="info-enfermedad">
+              <h3>Revisá</h3>
+              <p>
+                Buscá agua acumulada en patios, balcones, macetas y objetos al
+                aire libre.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-enfermedad">
+              <h3>Eliminá</h3>
+              <p>
+                Desechá objetos que no uses y tapá tanques y recipientes de
+                almacenamiento.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-enfermedad">
+              <h3>Protegete</h3>
+              <p>
+                Usá repelente y consultá a un centro de salud ante síntomas.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="assets/img/zika.jpg" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>El zika</h5>
-            <p>La enfermedad llamada zika transmitida por los mosquitos</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleDark"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleDark"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+      </section>
+    </main>
   </body>
 </html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta | Infórmate y cuídate</title>
+    <link rel="stylesheet" href="assets/enfermedades.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-flex">
+        <a class="logo" href="index.html">Infórmate y cuídate</a>
+        <div class="nav-links">
+          <a href="index.html">Inicio</a
+          ><a href="enfermedades.html">Enfermedades y prevención</a
+          ><a class="active" href="encuesta.html">Encuesta</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <section class="encuesta-panel">
+        <h1>Contanos cómo te cuidás.</h1>
+        <p>
+          Tu respuesta ayuda a conocer qué hábitos de prevención están presentes
+          en la comunidad.
+        </p>
+        <form class="formulario" action="#respuesta" method="get">
+          <label for="nombre">¿Cómo te llamás?</label
+          ><input
+            id="nombre"
+            name="nombre"
+            type="text"
+            autocomplete="name"
+            required
+          /><label for="prevencion"
+            >¿Qué acción realizás con más frecuencia?</label
+          ><select id="prevencion" name="prevencion" required>
+            <option value="">Elegí una opción</option>
+            <option>Elimino recipientes con agua</option>
+            <option>Uso repelente</option>
+            <option>Coloco mosquiteros</option>
+            <option>Realizo todas las anteriores</option></select
+          ><label for="mensaje">¿Qué te gustaría aprender?</label
+          ><textarea id="mensaje" name="mensaje" rows="4"></textarea
+          ><button class="action-link" type="submit">Enviar respuesta</button>
+        </form>
+        <p id="respuesta">Gracias por participar en la prevención.</p>
+      </section>
+    </main>
+  </body>
+</html>
