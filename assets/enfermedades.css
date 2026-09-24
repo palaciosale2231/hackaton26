@@ -1,0 +1,37 @@
+body {
+    background-color: #f2f7f4;
+    
+}
+
+header {
+    background-color: #f0ed4b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+h4 {
+    text-align: center;
+}
+Inicio {
+    text-decoration: none;
+}
+.video {
+    text-align: center;
+}
+
+
+#carouselPequeno {
+    width: 350px;
+    margin: 30px auto;
+}
+
+#carouselPequeno .carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#carouselPequeno img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+}
