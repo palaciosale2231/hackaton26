@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MosquiInfo — Prevención de Salud Pública</title>
+
+    <!-- Estilos propios locales -->
+    <link rel="stylesheet" href="assents/interfaz.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">🦟 MosquiInfo</div>
+        <div class="nav-links">
+          <a href="#ciclo">Ciclo Biológico</a>
+          <a href="#sintomas">Triage</a>
+          <a href="#reportar">Reportar Barrio</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <header class="hero">
+      <div class="container">
+        <span class="hero-badge">Plataforma Sanitaria Comunitaria</span>
+        <h1>
+          Información sin vueltas para prevenir enfermedades por mosquitos
+        </h1>
+        <p>
+          Detección temprana de criaderos, guía de orientación clínica por
+          grupos de edad y reporte ciudadano.
+        </p>
+      </div>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="container main-content">
+      <!-- SECCIÓN 1: CARDS CICLO MOSQUITO -->
+      <section id="ciclo" class="section">
+        <h2 class="section-title">¿Dónde se crían y cómo cortar su ciclo?</h2>
+        <p class="section-subtitle">
+          Identifica la fase de desarrollo para aplicar la medida de control
+          adecuada en tu vivienda.
+        </p>
+
+        <div id="contenedor-ciclo" class="grid-cards"></div>
+      </section>
+
+      <!-- SECCIÓN 2: TRIAGE DE SÍNTOMAS -->
+      <section id="sintomas" class="section card-box">
+        <h2 class="section-title">Asistente de Evaluación de Síntomas</h2>
+        <p class="section-subtitle">
+          Obtén pautas de actuación según el grupo de edad y los signos
+          detectados.
+        </p>
+
+        <form id="form-triage" class="triage-grid">
+          <div>
+            <!-- Selección Rango de Edad -->
+            <div class="form-group">
+              <label>1. Grupo de Edad</label>
+              <div class="btn-group-edad">
+                <button type="button" data-edad="bebe" class="btn-edad">
+                  👶 Bebé (0-2 años)
+                </button>
+                <button type="button" data-edad="nino" class="btn-edad">
+                  👦 Niño (2-12 años)
+                </button>
+                <button
+                  type="button"
+                  data-edad="adulto"
+                  class="btn-edad active"
+                >
+                  🧑 Adulto (+12)
+                </button>
+              </div>
+            </div>
+
+            <!-- Selección Síntomas -->
+            <div class="form-group">
+              <label>2. Síntomas Manifestados</label>
+              <div id="contenedor-sintomas" class="checkbox-grid"></div>
+            </div>
+
+            <button type="submit" class="btn-submit">Evaluar Síntomas</button>
+          </div>
+
+          <!-- Resultado Triage -->
+          <div>
+            <div id="caja-resultado" class="resultado-box">
+              <p>
+                Selecciona la edad y síntomas a la izquierda para ver las pautas
+                médicas recomendadas.
+              </p>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- SECCIÓN 3: REPORTE BARRIAL -->
+      <section id="reportar" class="section section-dark">
+        <h2 class="section-title">¿Reportar un foco/criadero en tu zona?</h2>
+        <p class="section-subtitle">
+          Aporta información sobre acumulaciones de agua o basura en la vía
+          pública.
+        </p>
+
+        <form id="form-reporte">
+          <div class="form-group">
+            <label>Dirección / Barrio</label>
+            <input
+              type="text"
+              id="rep-direccion"
+              class="form-input"
+              required
+              placeholder="Ej. Calle Belgrano 450, Barrio Norte"
+            />
+          </div>
+          <div class="form-group">
+            <label>Descripción del riesgo</label>
+            <textarea
+              id="rep-desc"
+              rows="3"
+              class="form-textarea"
+              required
+              placeholder="Ej. Neumáticos abandonados juntando agua de lluvia."
+            ></textarea>
+          </div>
+          <button type="submit" id="btn-reporte" class="btn-secondary">
+            Enviar Reporte
+          </button>
+          <p id="msg-reporte-exito" class="msg-exito hidden">
+            ✅ ¡Reporte guardado correctamente!
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © MosquiInfo — Sistema de Información y Prevención de Salud Pública.
+      </p>
+    </footer>
+
+    <!-- Carga de scripts JS locales -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
