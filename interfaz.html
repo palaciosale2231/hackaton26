@@ -3,149 +3,203 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MosquiInfo — Prevención de Salud Pública</title>
+    <title>MosquiInfo — Prevención y Conciencia Comunitaria</title>
 
-    <!-- Estilos propios locales -->
+    <!-- Estilos CSS locales -->
     <link rel="stylesheet" href="assents/interfaz.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
+    <!-- NAVEGACIÓN PRINCIPAL -->
     <nav class="navbar">
-      <div class="container nav-container">
-        <div class="logo">🦟 MosquiInfo</div>
+      <div class="container nav-flex">
+        <div class="logo">🦟 Informate y cuidate.</div>
         <div class="nav-links">
-          <a href="#ciclo">Ciclo Biológico</a>
-          <a href="#sintomas">Triage</a>
-          <a href="#reportar">Reportar Barrio</a>
+          <a href="index.html" class="active">Inicio / Problemática</a>
+          <!-- Enlaces hacia los módulos de tu compañero -->
+          <a href="ciclo.html" class="link-companero"
+            >Enfermedades y prevención. ↗</a
+          >
+          <a href="enfermedades.html" class="link-companero">Encuesta ↗</a>
         </div>
       </div>
     </nav>
 
-    <!-- HERO HEADER -->
+    <!-- PORTADA / HERO BANNER (Con la imagen de Formosa de fondo) -->
     <header class="hero">
       <div class="container">
-        <span class="hero-badge">Plataforma Sanitaria Comunitaria</span>
-        <h1>
-          Información sin vueltas para prevenir enfermedades por mosquitos
-        </h1>
-        <p>
-          Detección temprana de criaderos, guía de orientación clínica por
-          grupos de edad y reporte ciudadano.
+        <span class="hero-badge">Proyecto de Salud Pública & Prevención</span>
+        <h1>Información de la Página</h1>
+        <p class="hero-description">
+          Promoviendo la conciencia ambiental y la prevención comunitaria contra
+          el mosquito vector en nuestra provincia.
         </p>
       </div>
     </header>
 
-    <!-- CONTENIDO -->
+    <!-- CONTENIDO PRINCIPAL DE TU MÓDULO -->
     <main class="container main-content">
-      <!-- SECCIÓN 1: CARDS CICLO MOSQUITO -->
-      <section id="ciclo" class="section">
-        <h2 class="section-title">¿Dónde se crían y cómo cortar su ciclo?</h2>
-        <p class="section-subtitle">
-          Identifica la fase de desarrollo para aplicar la medida de control
-          adecuada en tu vivienda.
-        </p>
+      <!-- REEMPLAZO MODERNO DE LA INTRODUCCIÓN (NUEVA ESTRUCTURA EN CARDS) -->
+      <section class="intro-moderna">
+        <div class="intro-header">
+          <span class="badge-salud">Propósito del Proyecto</span>
+          <h2 class="intro-titulo">
+            Prevención Vectorial & Acción Comunitaria
+          </h2>
+        </div>
 
-        <div id="contenedor-ciclo" class="grid-cards"></div>
-      </section>
-
-      <!-- SECCIÓN 2: TRIAGE DE SÍNTOMAS -->
-      <section id="sintomas" class="section card-box">
-        <h2 class="section-title">Asistente de Evaluación de Síntomas</h2>
-        <p class="section-subtitle">
-          Obtén pautas de actuación según el grupo de edad y los signos
-          detectados.
-        </p>
-
-        <form id="form-triage" class="triage-grid">
-          <div>
-            <!-- Selección Rango de Edad -->
-            <div class="form-group">
-              <label>1. Grupo de Edad</label>
-              <div class="btn-group-edad">
-                <button type="button" data-edad="bebe" class="btn-edad">
-                  👶 Bebé (0-2 años)
-                </button>
-                <button type="button" data-edad="nino" class="btn-edad">
-                  👦 Niño (2-12 años)
-                </button>
-                <button
-                  type="button"
-                  data-edad="adulto"
-                  class="btn-edad active"
-                >
-                  🧑 Adulto (+12)
-                </button>
-              </div>
+        <div class="intro-grid">
+          <!-- Tarjeta 1: El Desafío -->
+          <div class="intro-card card-destacada">
+            <div class="card-icon-wrapper">
+              <span class="icon-emoji">🦟</span>
             </div>
-
-            <!-- Selección Síntomas -->
-            <div class="form-group">
-              <label>2. Síntomas Manifestados</label>
-              <div id="contenedor-sintomas" class="checkbox-grid"></div>
-            </div>
-
-            <button type="submit" class="btn-submit">Evaluar Síntomas</button>
-          </div>
-
-          <!-- Resultado Triage -->
-          <div>
-            <div id="caja-resultado" class="resultado-box">
+            <div class="card-content">
+              <h3>Desafío en Salud Pública</h3>
               <p>
-                Selecciona la edad y síntomas a la izquierda para ver las pautas
-                médicas recomendadas.
+                Las enfermedades arbovirales transmitidas por el mosquito
+                <em>Aedes aegypti</em> constituyen un desafío constante para la
+                salud pública en múltiples comunidades.
               </p>
             </div>
           </div>
-        </form>
+
+          <!-- Tarjeta 2: La Causa -->
+          <div class="intro-card">
+            <div class="card-icon-wrapper icon-alerta">
+              <span class="icon-emoji">⚠️</span>
+            </div>
+            <div class="card-content">
+              <h3>Falta de Información Accesible</h3>
+              <p>
+                La persistencia de criaderos domésticos y peridomésticos
+                responde, en gran medida, a la falta de información clara,
+                estructurada y accesible para la población general.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3: Nuestra Solución -->
+          <div class="intro-card card-solucion">
+            <div class="card-icon-wrapper icon-exito">
+              <span class="icon-emoji">💡</span>
+            </div>
+            <div class="card-content">
+              <h3>Nuestra Herramienta</h3>
+              <p>
+                Este proyecto aborda dicha brecha mediante una solución digital
+                interactiva que promueve la
+                <strong>autoevaluación comunitaria</strong> y la
+                <strong>acción preventiva directa</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- SECCIÓN 3: REPORTE BARRIAL -->
-      <section id="reportar" class="section section-dark">
-        <h2 class="section-title">¿Reportar un foco/criadero en tu zona?</h2>
-        <p class="section-subtitle">
-          Aporta información sobre acumulaciones de agua o basura en la vía
-          pública.
+      <!-- PLANTEAMIENTO DE LA PROBLEMÁTICA -->
+      <section class="section-card problem-box">
+        <h2>Planteamiento de la Problemática Central</h2>
+        <p>
+          Existe una marcada deficiencia en la disponibilidad de información
+          accesible, organizada e intuitiva sobre los factores que favorecen la
+          reproducción del mosquito. Esta carencia obstaculiza la adopción de
+          conductas preventivas sostenibles y limita la participación activa de
+          los vecinos en la protección de sus entornos.
+        </p>
+      </section>
+
+      <!-- BLOQUES DE CONCIENTIZACIÓN -->
+      <section class="grid-2-cols">
+        <!-- Tarjeta 1 -->
+        <article class="card-info">
+          <div class="card-header-icon">🦟</div>
+          <h3>Cuidarnos empieza por reconocer el riesgo</h3>
+          <p>
+            Los mosquitos pueden estar presentes en muchos lugares de nuestra
+            vida cotidiana. Un recipiente con agua acumulada, una maceta, una
+            botella o incluso un objeto olvidado en el patio pueden convertirse
+            en un posible criadero.
+          </p>
+          <p>
+            Muchas veces, estos pequeños detalles pasan desapercibidos. Sin
+            embargo, identificarlos a tiempo y eliminarlos puede ser una parte
+            importante de la prevención de enfermedades transmitidas por
+            mosquitos, como el dengue.
+          </p>
+          <p class="text-subtle">
+            Por eso, esta página fue creada para acercar información clara,
+            sencilla y accesible, ayudándote a reconocer situaciones de riesgo,
+            identificar posibles criaderos y conocer acciones que pueden
+            realizarse desde el hogar y la comunidad.
+          </p>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="card-info">
+          <div class="card-header-icon">🔎</div>
+          <h3>Mirá, identificá y prevení</h3>
+          <p>
+            Muchas veces, estos posibles criaderos pasan desapercibidos porque
+            forman parte de nuestro entorno cotidiano. Reconocerlos es el primer
+            paso para poder prevenir.
+          </p>
+          <p>
+            Esta página busca brindar información clara, sencilla y accesible
+            para ayudar a identificar situaciones que pueden favorecer la
+            proliferación de mosquitos y conocer diferentes medidas de
+            prevención.
+          </p>
+          <p>
+            La prevención comienza con pequeñas acciones: revisar nuestros
+            espacios, evitar la acumulación de agua, mantener limpios los patios
+            y eliminar aquellos objetos que puedan convertirse en criaderos.
+          </p>
+          <div class="callout-highlight">
+            <strong
+              >Porque prevenir empieza por mirar nuestro entorno, reconocer el
+              riesgo y actuar a tiempo.</strong
+            >
+          </div>
+        </article>
+      </section>
+
+      <!-- CONEXIÓN CON EL TRABAJO DE TU COMPAÑERO -->
+      <section class="section-card cta-section">
+        <span class="cta-subtitle">Siguiente paso</span>
+        <h2>Explora las herramientas de aprendizaje y diagnóstico</h2>
+        <p>
+          Para profundizar en el tema, continúa navegando hacia las secciones
+          detalladas:
         </p>
 
-        <form id="form-reporte">
-          <div class="form-group">
-            <label>Dirección / Barrio</label>
-            <input
-              type="text"
-              id="rep-direccion"
-              class="form-input"
-              required
-              placeholder="Ej. Calle Belgrano 450, Barrio Norte"
-            />
-          </div>
-          <div class="form-group">
-            <label>Descripción del riesgo</label>
-            <textarea
-              id="rep-desc"
-              rows="3"
-              class="form-textarea"
-              required
-              placeholder="Ej. Neumáticos abandonados juntando agua de lluvia."
-            ></textarea>
-          </div>
-          <button type="submit" id="btn-reporte" class="btn-secondary">
-            Enviar Reporte
-          </button>
-          <p id="msg-reporte-exito" class="msg-exito hidden">
-            ✅ ¡Reporte guardado correctamente!
-          </p>
-        </form>
+        <div class="grid-cta-buttons">
+          <a href="ciclo.html" class="card-cta">
+            <div class="cta-icon">🔄</div>
+            <div>
+              <h4>Ciclo de Vida y Criaderos</h4>
+              <p>Aprende a reconocer huevos, larvas y pupas en tu hogar.</p>
+            </div>
+          </a>
+
+          <a href="enfermedades.html" class="card-cta">
+            <div class="cta-icon">🩺</div>
+            <div>
+              <h4>Enfermedades y Síntomas</h4>
+              <p>
+                Guía de detección rápida sobre Dengue, Zika y cuidados por edad.
+              </p>
+            </div>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
       <p>
-        © MosquiInfo — Sistema de Información y Prevención de Salud Pública.
+        © MosquiInfo — Módulo de Introducción y Concientización Comunitaria.
       </p>
     </footer>
 
-    <!-- Carga de scripts JS locales -->
-    <script src="js/data.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
