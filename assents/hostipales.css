@@ -1,0 +1,230 @@
+/* ==========================================
+   PALETA PASTEL: VERDE Y CELESTE
+   ========================================== */
+:root {
+  --verde-primario: #9ad9c8;
+  --verde-oscuro: #1d5d4f;
+  --celeste-claro: #edfafd;
+  --celeste-suave: #dff5fb;
+  --fondo-general: #f5fbff;
+  --blanco: #ffffff;
+  --texto-principal: #1d2d2a;
+  --borde: #d7efe8;
+  --alerta-fondo: #f0fbf8;
+  --alerta-borde: #7ccdb3;
+  --alerta-texto: #1a4d43;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #f7fcff 0%, #edfdf9 100%);
+  color: var(--texto-principal);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, rgba(154, 217, 200, 0.9), rgba(155, 204, 230, 0.9));
+  border-bottom: 3px solid var(--verde-primario);
+  text-align: center;
+  padding: 2.2rem 1rem;
+}
+
+header h1 {
+  background: transparent;
+  color: #0f4039;
+  text-align: center;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  font-size: clamp(2rem, 2.2vw, 2.8rem);
+  letter-spacing: 0.02em;
+}
+
+header h2 {
+  margin: 0;
+  color: #204f47;
+  background: transparent;
+  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+  font-weight: 600;
+}
+
+nav {
+  background: rgba(234, 250, 246, 0.95);
+  border-bottom: 1px solid var(--borde);
+  padding: 1rem 0.8rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 12px rgba(29, 93, 79, 0.06);
+}
+
+nav a {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--verde-oscuro);
+  border: 1px solid rgba(29, 93, 79, 0.12);
+  padding: 0.7rem 1rem;
+  margin: 0.3rem 0.4rem;
+  font-weight: 700;
+  display: inline-block;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--verde-primario);
+  color: #123d36;
+  transform: translateY(-1px);
+}
+
+main {
+  text-align: left;
+  padding: 2rem 1.25rem 3rem;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+main h2 {
+  color: var(--verde-oscuro);
+  margin: 0 0 1.2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+main h3,
+main h4 {
+  color: var(--verde-oscuro);
+  background: transparent;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem 1rem;
+  margin-top: 1.5rem;
+  background: rgba(234, 250, 246, 0.95);
+  border-top: 1px solid var(--borde);
+  color: var(--verde-oscuro);
+  font-weight: 600;
+}
+
+/* ==========================================
+   ALERTA SOBRE MOSQUITOS Y SÍNTOMAS
+   ========================================== */
+.alerta-consecuencias {
+  background: var(--alerta-fondo);
+  border: 1px solid var(--alerta-borde);
+  border-left: 6px solid var(--verde-oscuro);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: 0 4px 16px rgba(29, 93, 79, 0.06);
+}
+
+.alerta-consecuencias h3 {
+  background: transparent;
+  color: var(--verde-oscuro);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
+
+.alerta-consecuencias p,
+.alerta-consecuencias li {
+  color: #2d4f4a;
+}
+
+.alerta-consecuencias ul {
+  line-height: 1.7;
+  padding-left: 1.2rem;
+  margin: 1rem 0 0;
+}
+
+.alerta-consecuencias li {
+  margin-bottom: 0.8rem;
+  background: transparent;
+}
+
+.sintomas-alerta {
+  background: linear-gradient(135deg, #e6f9f4, #edf9ff);
+  border: 1px solid rgba(29, 93, 79, 0.12);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin-top: 1.2rem;
+}
+
+.sintomas-alerta p {
+  background: transparent;
+  color: var(--verde-oscuro);
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ==========================================
+   MAPA DE GOOGLE MAPS
+   ========================================== */
+.seccion-mapa {
+  margin: 2rem 0;
+}
+
+.seccion-mapa h3 {
+  margin-bottom: 0.6rem;
+}
+
+.seccion-mapa p {
+  margin-bottom: 1rem;
+  color: #355a55;
+}
+
+.contenedor-mapa {
+  width: 100%;
+  height: 420px;
+  border: 2px solid var(--verde-primario);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(29, 93, 79, 0.08);
+}
+
+.contenedor-mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ==========================================
+   TARJETAS DE HOSPITALES
+   ========================================== */
+.listado-centros {
+  margin-top: 2.1rem;
+}
+
+.card-centro {
+  background: linear-gradient(180deg, #ffffff 0%, #f1fbff 100%);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(29, 93, 79, 0.04);
+}
+
+.card-centro h4 {
+  background: transparent;
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+  color: var(--verde-oscuro);
+  font-size: 1.12rem;
+}
+
+.card-centro p {
+  background: transparent;
+  margin: 0.35rem 0;
+  color: #325f59;
+}
+
+strong {
+  color: #123f39;
+}

@@ -2,18 +2,18 @@
    1. VARIABLES Y PALETA AMARILLO CLARO
    ========================================== */
 :root {
-  /* Paleta Amarillo / Cálida */
-  --color-primario: #eab308;      /* Amarillo Cálido */
-  --color-oscuro: #854d0e;        /* Amarillo/Marrón Oscuro para encabezados */
-  --color-barra: #fef08a;         /* Amarillo Claro para el Navbar */
-  --color-fondo: #fefce8;         /* Fondo General Amarillo Muy Claro */
-  --color-card-bg: #ffffff;       /* Tarjetas Blancas para contraste */
-  --color-texto: #1c1917;         /* Texto Lectura Oscuro */
-  --color-borde: #fef08a;         /* Bordes Suaves Amarillos */
+  /* Paleta pastel verde / celeste */
+  --color-primario: #9ad9c8;      /* verde pastel */
+  --color-oscuro: #1f6b59;        /* verde oscuro */
+  --color-barra: #eafaf5;         /* fondo navbar */
+  --color-fondo: #f4fbff;         /* fondo general celeste muy claro */
+  --color-card-bg: #ffffff;       /* tarjetas */
+  --color-texto: #1f2d2a;         /* texto principal */
+  --color-borde: #d8f3ee;        /* borde suave */
   
-  --alerta-amarillo-bg: #fef9c3;  /* Fondo Alerta/Aviso */
-  --alerta-amarillo-borde: #fde047;
-  --alerta-amarillo-texto: #713f12;
+  --alerta-amarillo-bg: #eefaf7;  /* fondo aviso */
+  --alerta-amarillo-borde: #9ad9c8;
+  --alerta-amarillo-texto: #1d5d4f;
 }
 
 * {
@@ -45,7 +45,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(133, 77, 14, 0.1);
+  box-shadow: 0 2px 10px rgba(31, 107, 89, 0.08);
   border-bottom: 3px solid var(--color-primario);
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .nav-links a {
-  color: #713f12;
+  color: #235a4d;
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 600;
@@ -90,27 +90,26 @@ body {
 }
 
 .link-companero {
-  background: rgba(234, 179, 8, 0.3);
-  color: #713f12 !important;
+  background: rgba(154, 217, 200, 0.2);
+  color: #235a4d !important;
   padding: 0.35rem 0.75rem;
-  border-radius: 6px;
-  border: 1px solid rgba(202, 138, 4, 0.4);
+  border-radius: 999px;
+  border: 1px solid rgba(31, 107, 89, 0.12);
   transition: all 0.2s;
 }
 
 .link-companero:hover {
   background: var(--color-primario);
-  color: #1c1917 !important;
+  color: #183f39 !important;
 }
 
-/* HERO CON FILTRO AMARILLO SOBRE LA IMAGEN */
+/* HERO CON FILTRO PASTEL */
 .hero {
   background: linear-gradient(
-      rgba(254, 240, 138, 0.88), 
-      rgba(234, 179, 8, 0.85)
-    ), 
-    url('img/OIP.webp'); /* Ruta desde assents/style.css hacia assents/img/OIP.webp */
-    
+      rgba(181, 230, 220, 0.72),
+      rgba(120, 196, 216, 0.7)
+    ),
+    url('img/OIP.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,7 +119,7 @@ body {
 }
 
 .hero-badge {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--color-oscuro);
   padding: 0.35rem 0.9rem;
   border-radius: 20px;
@@ -129,22 +128,24 @@ body {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 1rem;
-  border: 1px solid var(--color-primario);
+  border: 1px solid rgba(31, 107, 89, 0.15);
 }
 
 .hero h1 {
   font-size: 2.2rem;
-  color: #422006;
+  color: #0b2f2a;
   margin-bottom: 0.8rem;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.35);
 }
 
 .hero-description {
   font-size: 1rem;
-  color: #713f12;
+  color: #0f3f38;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.7;
-  font-weight: 500;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
 }
 
 /* ==========================================
@@ -164,7 +165,7 @@ body {
 }
 
 .badge-salud {
-  background: #fef9c3;
+  background: #ecfbf7;
   color: var(--color-oscuro);
   font-size: 0.75rem;
   font-weight: 700;
@@ -172,7 +173,7 @@ body {
   letter-spacing: 0.8px;
   padding: 0.4rem 1rem;
   border-radius: 30px;
-  border: 1px solid var(--color-primario);
+  border: 1px solid rgba(31, 107, 89, 0.15);
   display: inline-block;
   margin-bottom: 0.5rem;
 }
@@ -201,7 +202,7 @@ body {
   border: 1px solid var(--color-borde);
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(234, 179, 8, 0.08);
+  box-shadow: 0 4px 15px rgba(31, 107, 89, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
@@ -210,11 +211,11 @@ body {
 
 .intro-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(234, 179, 8, 0.2);
+  box-shadow: 0 10px 25px rgba(46, 138, 119, 0.12);
 }
 
 .card-icon-wrapper {
-  background: #fef9c3;
+  background: #ecfbf7;
   width: 48px;
   height: 48px;
   border-radius: 12px;
@@ -243,7 +244,7 @@ body {
 
 .card-solucion {
   border-color: var(--color-primario);
-  background: linear-gradient(180deg, #ffffff 0%, #fef9c3 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #eefaf6 100%);
 }
 
 .card-solucion p strong {
@@ -274,7 +275,7 @@ body {
 }
 
 .problem-box p {
-  color: #713f12;
+  color: #315f52;
   font-size: 0.95rem;
 }
 
@@ -323,11 +324,11 @@ body {
 }
 
 .callout-highlight {
-  background: #fef9c3;
+  background: #ecfbf7;
   border-left: 3px solid var(--color-primario);
   padding: 0.8rem;
   border-radius: 6px;
-  color: #713f12;
+  color: #1d5d4f;
   font-size: 0.85rem;
   margin-top: 1rem;
 }
@@ -337,8 +338,8 @@ body {
    ========================================== */
 .cta-section {
   text-align: center;
-  background: #fef9c3;
-  border: 2px dashed var(--color-primario);
+  background: #f1fbf8;
+  border: 2px dashed rgba(31, 107, 89, 0.25);
 }
 
 .cta-subtitle {
@@ -356,7 +357,7 @@ body {
 
 .cta-section p {
   font-size: 0.88rem;
-  color: #713f12;
+  color: #2d5d54;
   margin-bottom: 1.5rem;
 }
 
@@ -389,7 +390,7 @@ body {
 .card-cta:hover {
   transform: translateY(-3px);
   border-color: var(--color-primario);
-  box-shadow: 0 6px 16px rgba(234, 179, 8, 0.2);
+  box-shadow: 0 6px 16px rgba(31, 107, 89, 0.12);
 }
 
 .cta-icon {
@@ -403,7 +404,7 @@ body {
 
 .card-cta p {
   font-size: 0.8rem;
-  color: #78716c;
+  color: #5b726d;
   margin-bottom: 0;
 }
 
@@ -412,7 +413,7 @@ body {
   text-align: center;
   padding: 2rem;
   font-size: 0.75rem;
-  color: #78716c;
+  color: #5d736d;
   border-top: 1px solid var(--color-borde);
   background: var(--color-barra);
 }
