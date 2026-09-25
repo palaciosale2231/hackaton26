@@ -83,6 +83,32 @@ body {
   gap: 0.8rem;
 }
 
+.dark-mode-btn {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--color-texto);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.dark-mode-btn:hover {
+  transform: rotate(20deg) scale(1.08);
+}
+
+.dark-mode-btn:focus-visible {
+  outline: 3px solid var(--color-primario);
+  outline-offset: 2px;
+}
+
 .nav-links a {
   color: #235a4d;
 
@@ -388,6 +414,98 @@ body {
 
 .footer p {
   margin: 0;
+}
+
+
+/* ==========================================
+   MODO OSCURO
+========================================== */
+
+body,
+.navbar,
+.encuesta-card,
+.opcion,
+.footer,
+.progress {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #07171d, #0b2028, #102c35);
+  color: #e9faff;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer {
+  background: rgba(5, 18, 23, 0.94);
+  color: #e8faff;
+  border-color: rgba(132, 220, 238, 0.2);
+}
+
+body.dark-mode .logo,
+body.dark-mode .nav-links a,
+body.dark-mode .nav-links a.active {
+  color: #e8faff;
+}
+
+body.dark-mode .link-companero {
+  background: rgba(132, 220, 238, 0.12);
+  border-color: rgba(132, 220, 238, 0.2);
+  color: #d3edf2 !important;
+}
+
+body.dark-mode .encuesta-card {
+  background: rgba(14, 42, 51, 0.94);
+  border-color: rgba(132, 220, 238, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .titulo h1,
+body.dark-mode .pregunta h2 {
+  color: #eaffff;
+}
+
+body.dark-mode .titulo p,
+body.dark-mode .progreso-info,
+body.dark-mode .footer {
+  color: #b9d9e2 !important;
+}
+
+body.dark-mode .progress {
+  background-color: #173b46;
+}
+
+body.dark-mode .opcion {
+  background-color: #102f39;
+  border-color: rgba(132, 220, 238, 0.2);
+  color: #d3edf2;
+}
+
+body.dark-mode .opcion:hover:not(:disabled),
+body.dark-mode .opcion.seleccionada {
+  background-color: #173f4a;
+  border-color: #8ee7fa;
+  color: #eaffff;
+}
+
+body.dark-mode .botones .btn-outline-secondary {
+  background-color: rgba(132, 220, 238, 0.12);
+  border-color: rgba(132, 220, 238, 0.35);
+  color: #d3edf2;
+}
+
+body.dark-mode .botones .btn-outline-secondary:hover {
+  background-color: #173b46;
+  color: #eaffff;
+}
+
+body.dark-mode .dark-mode-btn {
+  background-color: #173b46;
+  color: #dffaff;
 }
 
 

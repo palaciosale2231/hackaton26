@@ -548,3 +548,99 @@ body.dark-mode .encuesta-card p {
   color: #b9d9e2;
 }
 
+body.dark-mode main h1,
+body.dark-mode main h2,
+body.dark-mode main h3,
+body.dark-mode main p {
+  color: #c5dce1;
+}
+
+body.dark-mode #resultado {
+  color: #c5dce1 !important;
+}
+
+body.dark-mode #resultado h2,
+body.dark-mode #resultado p {
+  color: #c5dce1 !important;
+}
+
+body.dark-mode #resultado.bg-success {
+  background-color: #24584f !important;
+}
+
+body.dark-mode #resultado.bg-warning {
+  background-color: #6b5523 !important;
+}
+
+body.dark-mode #resultado.bg-danger {
+  background-color: #66363b !important;
+}
+
+body.dark-mode #recomendaciones .alert {
+  color: #c5dce1;
+  border-color: rgba(197, 220, 225, 0.2);
+}
+
+body.dark-mode #recomendaciones .alert-success {
+  background-color: #24584f;
+}
+
+body.dark-mode #recomendaciones .alert-danger {
+  background-color: #66363b;
+}
+
+body.dark-mode #recomendaciones h5,
+body.dark-mode #recomendaciones p {
+  color: #c5dce1;
+}
+
+body.dark-mode #recomendaciones a {
+  color: #9bd5df;
+}
+
+body.dark-mode #todas-recomendaciones .card {
+  background-color: #102f39;
+  border-color: rgba(132, 220, 238, 0.2);
+  color: #c5dce1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22) !important;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#todas-recomendaciones .card {
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#todas-recomendaciones .card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primario);
+  box-shadow: 0 14px 28px rgba(31, 107, 89, 0.2) !important;
+}
+
+body.dark-mode #todas-recomendaciones .card:hover {
+  border-color: #8ee7fa;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.38) !important;
+}
+
+body.dark-mode #todas-recomendaciones .card-body {
+  background-color: #102f39;
+}
+
+body.dark-mode #todas-recomendaciones .card-title {
+  color: #d3e8ec;
+}
+
+body.dark-mode #todas-recomendaciones .card-text {
+  color: #b9d9e2;
+}
+
+body.dark-mode #todas-recomendaciones .badge {
+  background-color: #276b61 !important;
+  color: #dff5f1 !important;
+}
+
