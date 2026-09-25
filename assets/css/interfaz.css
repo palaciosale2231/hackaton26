@@ -124,7 +124,7 @@ body {
       rgba(181, 230, 220, 0.72),
       rgba(120, 196, 216, 0.7)
     ),
-    url('img/OIP.webp');
+    url('../img/OIP.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -503,7 +503,7 @@ body.dark-mode footer {
 body.dark-mode .hero {
   background:
     linear-gradient(rgba(7, 35, 42, 0.48), rgba(7, 35, 42, 0.58)),
-    url("img/OIP.webp");
+    url("../img/OIP.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
