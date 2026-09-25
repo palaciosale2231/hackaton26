@@ -629,3 +629,234 @@ body {
   background: var(--color-barra);
 }
 
+
+.dark-mode-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 20px;
+}
+
+.dark-mode-btn:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+
+/* TRANSICIÓN GENERAL */
+
+body,
+.navbar,
+.seccion,
+.presentacion,
+.mosquito-card,
+.info-enfermedad,
+.prevencion,
+.prevencion-item {
+  transition:
+    background 0.4s ease,
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================
+   OSCURO
+========================= */
+
+body.dark-mode {
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(91, 190, 215, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(67, 174, 201, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #07171d,
+      #0b2028,
+      #102c35
+    );
+
+  color: #e9faff;
+}
+
+
+/* NAVBAR */
+
+body.dark-mode .navbar {
+  background: rgba(5, 18, 23, 0.9);
+  border-color: rgba(150, 225, 240, 0.15);
+}
+
+body.dark-mode .logo,
+body.dark-mode .nav-links a {
+  color: #e8faff;
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .nav-links .active {
+  color: #8ee7fa;
+}
+
+
+/* PRESENTACIÓN */
+
+body.dark-mode .presentacion {
+  background: rgba(10, 32, 40, 0.85);
+  color: #e9faff;
+}
+
+body.dark-mode .presentacion p {
+  color: #b9d9e2;
+}
+
+
+/* SECCIONES */
+
+body.dark-mode .seccion {
+  color: #e9faff;
+}
+
+body.dark-mode .seccion p {
+  color: #b9d9e2;
+}
+
+
+/* CARDS */
+
+body.dark-mode .mosquito-card,
+body.dark-mode .info-enfermedad,
+body.dark-mode .prevencion-item {
+  background: rgba(14, 42, 51, 0.9);
+  color: #e9faff;
+  border: 1px solid rgba(132, 220, 238, 0.15);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .mosquito-card p,
+body.dark-mode .info-enfermedad p,
+body.dark-mode .prevencion-item p {
+  color: #b9d9e2;
+}
+
+
+/* TÍTULOS */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5 {
+  color: #eaffff;
+}
+
+
+/* BOTÓN */
+
+body.dark-mode .dark-mode-btn {
+  background: #173b46;
+  color: #dffaff;
+}
+
+
+/* PREVENCIÓN */
+
+body.dark-mode .prevencion {
+  background: linear-gradient(
+    135deg,
+    #0b303b,
+    #124552
+  );
+}
+body {
+  background: linear-gradient(
+    135deg,
+    #b8e8f5 0%,
+    #d9f5fb 35%,
+    #f4fcff 70%,
+    #c8edf7 100%
+  );
+  background-attachment: fixed;
+}
+
+.info-enfermedad {
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+  cursor: pointer;
+}
+
+.info-enfermedad:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 20px 40px rgba(0, 120, 160, 0.18);
+}
+.nav-links a {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.nav-links a:hover {
+  transform: scale(1.15);
+}
+/* Cuadro del texto del carousel */
+.carousel-caption {
+  background: rgba(10, 35, 45, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+
+  padding: 18px 25px;
+  max-width: 650px;
+
+  margin: 0 auto 30px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Título */
+.carousel-caption h5 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Texto */
+.carousel-caption p {
+  color: #f1fbff;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.carousel-caption {
+  animation: aparecerTexto 0.6s ease;
+}
+
+@keyframes aparecerTexto {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
