@@ -17,12 +17,12 @@
     <nav class="navbar">
       <div class="container nav-flex">
         <div class="logo">Informate y cuidate.</div>
+
         <div class="nav-links">
           <a href="interfaz.html" class="active">Interfaz</a>
           <a href="enfermedades.html" class="link-companero">Enfermedades</a>
           <a href="encuesta.html" class="link-companero">Encuesta</a>
           <a href="hospitales.html" class="link-companero">Hospitales</a>
-          <a href="resultado.html" class="link-companero">Resultado</a>
         </div>
       </div>
     </nav>
@@ -60,6 +60,10 @@
       </div>
     </main>
 
+    <footer class="footer">
+      <p>© GAM dev — Módulo de Introducción y Concientización Comunitaria.</p>
+    </footer>
+
     <script>
       const porcentaje = Number(localStorage.getItem("porcentajePrevencion"));
 
@@ -67,11 +71,8 @@
         JSON.parse(localStorage.getItem("recomendaciones")) || [];
 
       const porcentajeElemento = document.getElementById("porcentaje");
-
       const mensajeElemento = document.getElementById("mensaje");
-
       const resultadoElemento = document.getElementById("resultado");
-
       const recomendacionesElemento =
         document.getElementById("recomendaciones");
 
@@ -140,11 +141,11 @@
 
       if (recomendaciones.length === 0) {
         recomendacionesElemento.innerHTML = `
-                <div class="alert alert-success">
-                    No se detectaron medidas preventivas que requieran atención.
-                    ¡Seguí manteniendo estos hábitos!
-                </div>
-            `;
+        <div class="alert alert-success">
+          No se detectaron medidas preventivas que requieran atención.
+          ¡Seguí manteniendo estos hábitos!
+        </div>
+      `;
       } else {
         recomendaciones.forEach(function (nombrePregunta) {
           const recomendacion = recomendacionesPorPregunta[nombrePregunta];
