@@ -68,6 +68,15 @@ body {
   margin-left: 0;
 }
 
+.navbar .logo {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  text-decoration: none;
+  transform: none;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -79,7 +88,11 @@ body {
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 600;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.25s ease;
+}
+
+.nav-links a:hover {
+  transform: scale(1.15);
 }
 
 .nav-links a.active {
@@ -416,5 +429,122 @@ body {
   color: #5d736d;
   border-top: 1px solid var(--color-borde);
   background: var(--color-barra);
+}
+
+.dark-mode-btn {
+  border: 0;
+  background: rgba(255, 255, 255, 0.55);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.dark-mode-btn:hover {
+  transform: rotate(20deg) scale(1.08);
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #07171d, #0b2028, #102c35);
+  color: #e9faff;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer {
+  background: rgba(5, 18, 23, 0.94);
+  color: #e8faff;
+}
+
+body.dark-mode .navbar .logo,
+body.dark-mode .navbar a,
+body.dark-mode .footer,
+body.dark-mode main p,
+body.dark-mode main li,
+body.dark-mode label {
+  color: #d3edf2;
+}
+
+body.dark-mode main h1,
+body.dark-mode main h2,
+body.dark-mode main h3,
+body.dark-mode main h4,
+body.dark-mode main h5 {
+  color: #eaffff;
+}
+
+body.dark-mode .dark-mode-btn {
+  background: #173b46;
+  color: #dffaff;
+}
+
+body.dark-mode .header-principal,
+body.dark-mode .alerta-consecuencias,
+body.dark-mode .card-centro,
+body.dark-mode .encuesta-card,
+body.dark-mode .section-card,
+body.dark-mode .intro-card,
+body.dark-mode .card-info {
+  background: rgba(14, 42, 51, 0.92);
+  color: #e9faff;
+  border-color: rgba(132, 220, 238, 0.2);
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode footer {
+  background: rgba(5, 18, 23, 0.94);
+  color: #e8faff;
+}
+
+body.dark-mode .hero {
+  background:
+    linear-gradient(rgba(7, 35, 42, 0.48), rgba(7, 35, 42, 0.58)),
+    url("img/OIP.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.dark-mode .cta-section {
+  background: rgba(14, 42, 51, 0.92);
+  border-color: rgba(132, 220, 238, 0.35);
+}
+
+body.dark-mode .cta-section .cta-subtitle,
+body.dark-mode .cta-section h2,
+body.dark-mode .cta-section > p {
+  color: #eaffff;
+}
+
+body.dark-mode .card-cta {
+  background: #173b46;
+  border-color: rgba(132, 220, 238, 0.3);
+  color: #e9faff;
+}
+
+body.dark-mode .card-cta h4,
+body.dark-mode .card-cta p {
+  color: #e9faff;
+}
+
+body.dark-mode .seccion-header h2,
+body.dark-mode .seccion-mapa h3,
+body.dark-mode .listado-centros h3,
+body.dark-mode .card-centro h4 {
+  color: #eaffff;
+}
+
+body.dark-mode .seccion-mapa p,
+body.dark-mode .card-centro p,
+body.dark-mode .sintomas-alerta p {
+  color: #b9d9e2;
+}
+
+body.dark-mode .card-centro p,
+body.dark-mode .alerta-consecuencias p,
+body.dark-mode .encuesta-card p {
+  color: #b9d9e2;
 }
 

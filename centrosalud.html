@@ -16,15 +16,22 @@
     <!-- Navegación Principal -->
     <nav class="navbar" aria-label="Navegación principal">
       <div class="container nav-flex">
-        <a href="interfaz.html" class="logo">Informate y cuidate.</a>
+        <a href="inicio.html" class="logo">Informate y cuidate.</a>
         <div class="nav-links">
-          <a href="interfaz.html" class="link-companero">Interfaz</a>
+          <a href="inicio.html" class="link-companero">Inicio</a>
           <a href="enfermedades.html" class="link-companero">Enfermedades</a>
           <a href="encuesta.html" class="link-companero">Encuesta</a>
-          <a href="hospitales.html" class="active" aria-current="page"
+          <a href="centrosalud.html" class="active" aria-current="page"
             >Hospitales</a
           >
-          <a href="resultado.html" class="link-companero">Resultado</a>
+          <button
+            id="modoOscuro"
+            class="dark-mode-btn"
+            type="button"
+            aria-label="Activar modo oscuro"
+          >
+            🌙
+          </button>
         </div>
       </div>
     </nav>
@@ -209,5 +216,6 @@
         <p>&copy; 2026 Prevención de Salud - Todos los derechos reservados.</p>
       </div>
     </footer>
+    <script src="js/modo-oscuro.js"></script>
   </body>
 </html>
