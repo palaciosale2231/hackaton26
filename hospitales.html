@@ -3,38 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prevención de Mosquitos y Centros de Salud</title>
+    <meta
+      name="description"
+      content="Información sobre la prevención del Dengue, Zika y Chikungunya, consecuencias de no tratarse a tiempo y red de hospitales en Formosa."
+    />
+    <title>Prevención de Mosquitos y Centros de Salud | Formosa</title>
+
+    <!-- Corregida la ruta de carpetas (assets) -->
     <link rel="stylesheet" href="assents/hostipales.css" />
     <link rel="stylesheet" href="assents/interfaz.css" />
   </head>
   <body>
-    <header>
-      <h1>Prevención y Salud Comunitaria</h1>
-      <h2>
-        Lucha contra las Enfermedades Transmitidas por Mosquitos (Dengue, Zika y
-        Chikungunya)
-      </h2>
-    </header>
-
-    <nav class="navbar">
+    <!-- Navegación Principal -->
+    <nav class="navbar" aria-label="Navegación principal">
       <div class="container nav-flex">
-        <div class="logo">Informate y cuidate.</div>
+        <a href="interfaz.html" class="logo">Informate y cuidate.</a>
         <div class="nav-links">
           <a href="interfaz.html" class="link-companero">Interfaz</a>
           <a href="enfermedades.html" class="link-companero">Enfermedades</a>
           <a href="encuesta.html" class="link-companero">Encuesta</a>
-          <a href="hospitales.html" class="active">Hospitales</a>
+          <a href="hospitales.html" class="active" aria-current="page"
+            >Hospitales</a
+          >
           <a href="resultado.html" class="link-companero">Resultado</a>
         </div>
       </div>
     </nav>
 
-    <main>
-      <h2>Consecuencias de Ignorar los Síntomas y Hospitales Cercanos</h2>
+    <!-- Encabezado Principal -->
+    <header class="header-principal">
+      <div class="container">
+        <div class="header-brand">Informate y cuidate.</div>
+        <h1>Prevención y Salud Comunitaria</h1>
+        <p class="subtitulo">
+          Lucha contra las Enfermedades Transmitidas por Mosquitos (Dengue, Zika
+          y Chikungunya)
+        </p>
+      </div>
+    </header>
 
-      <!-- Sección de concientización y riesgos de los mosquitos -->
-      <section class="alerta-consecuencias">
-        <h3>
+    <!-- Contenido Principal -->
+    <main class="container">
+      <header class="seccion-header">
+        <h2>Consecuencias de Ignorar los Síntomas y Hospitales Cercanos</h2>
+      </header>
+
+      <!-- Sección de concientización y riesgos -->
+      <section class="alerta-consecuencias" aria-labelledby="titulo-alerta">
+        <h3 id="titulo-alerta">
           ⚠️ ¿Qué pasa si no acudes al médico ante síntomas de enfermedades por
           mosquitos?
         </h3>
@@ -61,7 +77,7 @@
           <li>
             <strong>Deshidratación Severa:</strong> La fiebre alta constante,
             los vómitos y la falta de ingesta de líquidos pueden causar
-            deshidratación rápida, requiriendo internación e hidratación por vía
+            deshidratación rápida, requiriendo internación e hidratación
             intravenosa.
           </li>
           <li>
@@ -71,7 +87,7 @@
           </li>
         </ul>
 
-        <div class="sintomas-alerta">
+        <div class="sintomas-alerta" role="alert">
           <p>
             <strong>🚨 Acude Inmediatamente a la Guardia si presentas:</strong>
             Dolor abdominal intenso, vómitos persistentes, sangrado de
@@ -80,9 +96,11 @@
         </div>
       </section>
 
-      <!-- Sección con Google Maps mostrando hospitales de Formosa -->
-      <section class="seccion-mapa">
-        <h3>Ubicación de Hospitales y Centros de Salud en Formosa</h3>
+      <!-- Sección con Google Maps -->
+      <section class="seccion-mapa" aria-labelledby="titulo-mapa">
+        <h3 id="titulo-mapa">
+          Ubicación de Hospitales y Centros de Salud en Formosa
+        </h3>
         <p>
           Encuentra en el mapa el hospital o centro asistencial más cercano para
           recibir atención inmediata:
@@ -91,6 +109,10 @@
         <div class="contenedor-mapa">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d57008.31298453982!2d-58.20456184918712!3d-26.179375178550186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shospitales%20y%20centros%20de%20salud%20formosa!5e0!3m2!1ses!2sar!4v1710000000000!5m2!1es!2sar"
+            title="Mapa interactivo con la ubicación de hospitales y centros de salud en Formosa"
+            width="100%"
+            height="450"
+            style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -99,54 +121,94 @@
         </div>
       </section>
 
-      <!-- Lista de Hospitales Principales de Referencia -->
-      <section class="listado-centros">
-        <h3>Hospitales de Referencia en Formosa</h3>
+      <!-- Lista de Hospitales Principales (Uso de tarjetas <article>) -->
+      <section class="listado-centros" aria-labelledby="titulo-hospitales">
+        <h3 id="titulo-hospitales">Hospitales de Referencia en Formosa</h3>
 
-        <div class="card-centro">
-          <h4>Hospital Central de Formosa</h4>
-          <p><strong>Ubicación:</strong> Padre Patiño y Av. 25 de Mayo</p>
-          <p>
-            <strong>Atención:</strong> Guardia de Urgencias y Emergencias 24 hs.
-          </p>
-        </div>
+        <div class="grid-centros">
+          <article class="card-centro">
+            <h4>Hospital Central de Formosa</h4>
+            <p><strong>Ubicación:</strong> Padre Patiño y Av. 25 de Mayo</p>
+            <p>
+              <strong>Atención:</strong> Guardia de Urgencias y Emergencias 24
+              hs.
+            </p>
+            <a
+              href="https://maps.google.com/?q=Hospital+Central+de+Formosa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-como-llegar"
+            >
+              📍 Cómo llegar
+            </a>
+          </article>
 
-        <div class="card-centro">
-          <h4>Hospital de Alta Complejidad "Presidente Juan Domingo Perón"</h4>
-          <p>
-            <strong>Ubicación:</strong> Av. Néstor Kirchner y Av. Pantaleón
-            Gómez
-          </p>
-          <p>
-            <strong>Atención:</strong> Atención especializada e internación.
-          </p>
-        </div>
+          <article class="card-centro">
+            <h4>
+              Hospital de Alta Complejidad "Presidente Juan Domingo Perón"
+            </h4>
+            <p>
+              <strong>Ubicación:</strong> Av. Néstor Kirchner y Av. Pantaleón
+              Gómez
+            </p>
+            <p>
+              <strong>Atención:</strong> Atención especializada e internación.
+            </p>
+            <a
+              href="https://maps.google.com/?q=Hospital+de+Alta+Complejidad+Formosa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-como-llegar"
+            >
+              📍 Cómo llegar
+            </a>
+          </article>
 
-        <div class="card-centro">
-          <h4>Hospital Distrital N° 8</h4>
-          <p>
-            <strong>Ubicación:</strong> Av. Ana Elías de Cánepa (Circunscripción
-            5)
-          </p>
-          <p>
-            <strong>Atención:</strong> Guardia médica 24 hs y consultorios de
-            demanda espontánea.
-          </p>
-        </div>
+          <article class="card-centro">
+            <h4>Hospital Distrital N° 8</h4>
+            <p>
+              <strong>Ubicación:</strong> Av. Ana Elías de Cánepa
+              (Circunscripción 5)
+            </p>
+            <p>
+              <strong>Atención:</strong> Guardia médica 24 hs y consultorios
+              espontáneos.
+            </p>
+            <a
+              href="https://maps.google.com/?q=Hospital+Distrital+N8+Formosa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-como-llegar"
+            >
+              📍 Cómo llegar
+            </a>
+          </article>
 
-        <div class="card-centro">
-          <h4>Hospital de la Madre y el Niño</h4>
-          <p><strong>Ubicación:</strong> Av. Córdoba y Salta</p>
-          <p>
-            <strong>Atención:</strong> Atención pediátrica y gineco-obstétrica
-            de urgencia.
-          </p>
+          <article class="card-centro">
+            <h4>Hospital de la Madre y el Niño</h4>
+            <p><strong>Ubicación:</strong> Av. Córdoba y Salta</p>
+            <p>
+              <strong>Atención:</strong> Atención pediátrica y gineco-obstétrica
+              de urgencia.
+            </p>
+            <a
+              href="https://maps.google.com/?q=Hospital+de+la+Madre+y+el+Nino+Formosa"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-como-llegar"
+            >
+              📍 Cómo llegar
+            </a>
+          </article>
         </div>
       </section>
     </main>
 
-    <footer>
-      &copy; 2026 Prevención de Salud - Todos los derechos reservados.
+    <!-- Pie de página -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Prevención de Salud - Todos los derechos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>
