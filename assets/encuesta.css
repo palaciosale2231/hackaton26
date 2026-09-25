@@ -66,8 +66,9 @@ body {
 }
 
 .logo {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 900;
 
   color: var(--color-oscuro);
 
@@ -75,6 +76,7 @@ body {
   align-items: center;
 
   gap: 0.5rem;
+  letter-spacing: 0.08em;
 }
 
 .nav-links {
