@@ -31,8 +31,6 @@
           class="video-presentacion"
           src="assets/img/videozamba1.0.mp4"
           autoplay
-          muted
-          loop
           playsinline
         ></video>
         <h1>Conocer los síntomas también es prevenir.</h1>
@@ -310,7 +308,7 @@
       // Recuperar preferencia
       if (localStorage.getItem("modo") === "oscuro") {
         document.body.classList.add("dark-mode");
-        boton.textContent = "#";
+        boton.textContent = "🌙";
       }
 
       boton.addEventListener("click", () => {
@@ -323,6 +321,15 @@
           boton.textContent = "☀️";
           localStorage.setItem("modo", "claro");
         }
+      });
+    </script>
+    <script>
+      const video = document.getElementById("videoZamba");
+
+      video.addEventListener("ended", () => {
+        video.muted = true;
+        video.currentTime = 0;
+        video.play();
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
