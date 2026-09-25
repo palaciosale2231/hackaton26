@@ -1,4 +1,19 @@
 /* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+  --color-primario: #9ad9c8;
+  --color-oscuro: #1f6b59;
+  --color-barra: #eafaf5;
+  --color-fondo: #f4fbff;
+  --color-card-bg: #ffffff;
+  --color-texto: #1f2d2a;
+  --color-borde: #d8f3ee;
+}
+
+
+/* ==========================================
    ESTILOS GENERALES
 ========================================== */
 
@@ -9,14 +24,13 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #f4f8f6;
-  color: #1f2937;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+
+  line-height: 1.6;
 }
 
 
@@ -25,50 +39,89 @@ body {
 ========================================== */
 
 .navbar {
-  width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 0;
+  background-color: var(--color-barra);
+  color: var(--color-texto);
+
+  padding: 0.8rem 1.5rem;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+  box-shadow: 0 2px 10px rgba(31, 107, 89, 0.08);
+
+  border-bottom: 3px solid var(--color-primario);
 }
 
-.nav-container {
-  max-width: 1200px;
-  min-height: 70px;
-  margin: 0 auto;
-  padding: 0 24px;
+.nav-flex {
+  width: 100%;
+  max-width: 100%;
+
+  padding: 0 1rem;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: #198754;
-  letter-spacing: -0.5px;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+  color: var(--color-oscuro);
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 0.8rem;
 }
 
 .nav-links a {
-  color: #4b5563;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
+  color: #235a4d;
 
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+  text-decoration: none;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  transition: color 0.2s;
 }
 
-.nav-links a:hover {
-  color: #198754;
-  transform: translateY(-1px);
+.nav-links a.active {
+  color: var(--color-oscuro);
+
+  font-weight: bold;
+
+  border-bottom: 2px solid var(--color-oscuro);
+
+  padding-bottom: 2px;
+}
+
+.link-companero {
+  background: rgba(154, 217, 200, 0.2);
+
+  color: #235a4d !important;
+
+  padding: 0.35rem 0.75rem;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(31, 107, 89, 0.12);
+
+  transition: all 0.2s;
+}
+
+.link-companero:hover {
+  background: var(--color-primario);
+
+  color: #183f39 !important;
 }
 
 
@@ -79,24 +132,28 @@ body {
 .encuesta-container {
   width: 100%;
   max-width: 900px;
+
   margin: 55px auto;
+
   padding: 0 20px;
 }
 
 
 /* ==========================================
-   TARJETA
+   TARJETA DEL EVALUADOR
 ========================================== */
 
 .encuesta-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 22px;
+  background: var(--color-card-bg);
+
+  border: 1px solid var(--color-borde);
+
+  border-radius: 16px;
+
   padding: 42px;
 
   box-shadow:
-    0 10px 30px rgba(15, 23, 42, 0.06),
-    0 2px 8px rgba(15, 23, 42, 0.04);
+    0 4px 15px rgba(31, 107, 89, 0.06);
 }
 
 
@@ -106,30 +163,35 @@ body {
 
 .titulo {
   text-align: center;
+
   margin-bottom: 35px;
 }
 
 .titulo h1 {
   margin-bottom: 10px;
 
-  color: #166534;
+  color: var(--color-oscuro);
+
   font-size: 2rem;
-  font-weight: 750;
-  letter-spacing: -0.6px;
+
+  font-weight: 800;
 }
 
 .titulo p {
   max-width: 650px;
+
   margin: 0 auto;
 
-  color: #6b7280;
-  font-size: 1rem;
-  line-height: 1.6;
+  color: #5b726d;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
 }
 
 
 /* ==========================================
-   INFORMACIÓN DEL PROGRESO
+   PROGRESO
 ========================================== */
 
 .progreso-info {
@@ -139,28 +201,26 @@ body {
 
   margin-bottom: 9px;
 
-  color: #6b7280;
+  color: #5d736d;
+
   font-size: 0.9rem;
-  font-weight: 500;
 }
-
-
-/* ==========================================
-   BARRA DE PROGRESO
-========================================== */
 
 .progress {
   height: 9px;
+
   margin-bottom: 45px;
 
   overflow: hidden;
 
-  background-color: #e5e7eb;
+  background-color: #e1f3ee;
+
   border-radius: 20px;
 }
 
 .progress-bar {
-  background-color: #198754;
+  background-color: var(--color-oscuro);
+
   border-radius: 20px;
 
   transition: width 0.4s ease;
@@ -173,6 +233,7 @@ body {
 
 .pregunta {
   max-width: 760px;
+
   margin: 0 auto 35px;
 
   text-align: center;
@@ -181,9 +242,12 @@ body {
 .pregunta h2 {
   margin: 0;
 
-  color: #1f2937;
+  color: var(--color-texto);
+
   font-size: 1.55rem;
+
   line-height: 1.45;
+
   font-weight: 650;
 }
 
@@ -194,7 +258,9 @@ body {
 
 .opciones {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 16px;
 }
 
@@ -203,11 +269,13 @@ body {
 
   padding: 22px 20px;
 
-  border: 2px solid #e5e7eb;
+  border: 2px solid var(--color-borde);
+
   border-radius: 15px;
 
   background-color: #ffffff;
-  color: #374151;
+
+  color: #315f52;
 
   display: flex;
   align-items: center;
@@ -216,7 +284,9 @@ body {
   text-align: center;
 
   font-size: 0.98rem;
+
   font-weight: 500;
+
   line-height: 1.4;
 
   cursor: pointer;
@@ -230,22 +300,26 @@ body {
 }
 
 .opcion:hover:not(:disabled) {
-  border-color: #198754;
-  background-color: #f0fdf4;
-  color: #166534;
+  border-color: var(--color-primario);
+
+  background-color: #ecfbf7;
+
+  color: var(--color-oscuro);
 
   transform: translateY(-2px);
 
-  box-shadow: 0 5px 15px rgba(25, 135, 84, 0.08);
+  box-shadow: 0 5px 15px rgba(31, 107, 89, 0.08);
 }
 
 .opcion.seleccionada {
-  border-color: #198754;
-  background-color: #ecfdf3;
-  color: #166534;
+  border-color: var(--color-oscuro);
+
+  background-color: #ecfbf7;
+
+  color: var(--color-oscuro);
 
   box-shadow:
-    0 0 0 3px rgba(25, 135, 84, 0.12);
+    0 0 0 3px rgba(154, 217, 200, 0.25);
 }
 
 .opcion:disabled {
@@ -259,6 +333,7 @@ body {
 
 .botones {
   display: flex;
+
   justify-content: flex-start;
 
   margin-top: 35px;
@@ -269,20 +344,50 @@ body {
 
   padding: 10px 20px;
 
-  border-radius: 10px;
+  border-radius: 999px;
 
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .botones .btn-outline-secondary {
-  color: #4b5563;
-  border-color: #d1d5db;
+  color: var(--color-oscuro);
+
+  border-color: var(--color-primario);
+
+  background-color: rgba(154, 217, 200, 0.12);
 }
 
 .botones .btn-outline-secondary:hover {
-  background-color: #f3f4f6;
-  color: #1f2937;
-  border-color: #9ca3af;
+  background-color: var(--color-primario);
+
+  color: #183f39;
+
+  border-color: var(--color-primario);
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+  text-align: center;
+
+  padding: 2rem;
+
+  margin-top: 50px;
+
+  font-size: 0.75rem;
+
+  color: #5d736d;
+
+  border-top: 1px solid var(--color-borde);
+
+  background: var(--color-barra);
+}
+
+.footer p {
+  margin: 0;
 }
 
 
@@ -292,27 +397,26 @@ body {
 
 @media (max-width: 768px) {
 
-  .nav-container {
-    min-height: 64px;
-    padding: 0 18px;
+  .nav-flex {
+    flex-direction: column;
+
+    gap: 12px;
   }
 
   .nav-links {
-    gap: 15px;
-  }
+    justify-content: center;
 
-  .nav-links a {
-    font-size: 0.82rem;
+    flex-wrap: wrap;
   }
 
   .encuesta-container {
     margin: 30px auto;
+
     padding: 0 14px;
   }
 
   .encuesta-card {
     padding: 30px 22px;
-    border-radius: 18px;
   }
 
   .titulo h1 {
@@ -327,19 +431,8 @@ body {
 
 @media (max-width: 600px) {
 
-  .nav-container {
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-
-    padding: 14px 16px;
-  }
-
   .nav-links {
-    width: 100%;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .nav-links a {
@@ -356,11 +449,13 @@ body {
 
   .opciones {
     grid-template-columns: 1fr;
+
     gap: 12px;
   }
 
   .opcion {
     min-height: 90px;
+
     padding: 18px;
   }
 
